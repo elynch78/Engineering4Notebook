@@ -55,7 +55,7 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 
 ### Test Link
 
-[](raspberry-pi/temp.py)
+[](https://github.com/elynch78/Engineering4Notebook/blob/main/raspberry-pi/test.py)
 
 ### Test Image
 
