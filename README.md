@@ -55,7 +55,12 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 
 ### Test Link
 
+[](raspberry-pi/temp.py)
+
 ### Test Image
-![](topgunsunset.jpg)
+
+![](images/topgunsunset.jpg)
+
 ### Test GIF
+
 ![](images/mr305.gif)
