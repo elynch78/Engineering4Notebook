@@ -16,7 +16,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
- ![](images/countdown.mov)
+ ![vid](images/countdown.mov)
 
 ### Wiring
 
