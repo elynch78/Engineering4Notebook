@@ -16,7 +16,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
- ![vid](images/trim.366115E5-4CCA-4526-8F29-EF979CF64859.MOV.mov)
+ ![vid](images/countdown.gif)
 
 ### Code
 
@@ -31,7 +31,7 @@ print("LAUNCHY")   #say dis
 
 ### Reflection
 
-This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. 
+This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
 
 &nbsp;
 
