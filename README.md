@@ -16,14 +16,19 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
- ![](images/trim.366115E5-4CCA-4526-8F29-EF979CF64859.MOV.mov)
-
-### Wiring
-
-This may not be applicable to all assignments. Anything where you wire something up, include the wiring diagram here. The diagram should be clear enough that I can recreate the wiring from scratch. 
+ ![vid](images/trim.366115E5-4CCA-4526-8F29-EF979CF64859.MOV.mov)
 
 ### Code
-Give me a link to your code. [Something like this](https://github.com/millerm22/Engineering_4_Notebook/blob/main/Raspberry_Pi/hello_world.py). Don't make me hunt through your folders, give me a nice link to click to take me there! Remember to **COMMENT YOUR CODE** if you want full credit. 
+
+``` python
+import time
+for x in range (10,0,-1):  #counting range for timer
+    print(x)
+    time.sleep (1)  #rest 1 sec between each number
+print("LAUNCHY")   #say dis
+
+```
+
 
 ### Reflection
 
