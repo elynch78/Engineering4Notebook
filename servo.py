@@ -11,7 +11,7 @@ led2.direction = digitalio.Direction.OUTPUT
 button = digitalio.DigitalInOut(board.GP16)  #what stuff is going in vs out and where it's at
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
-pwm_servo = pwmio.PWMOut(board.GP7, duty_cycle=2 ** 15, frequency=50)  #setting up servo
+pwm_servo = pwmio.PWMOut(board.GP5, duty_cycle=2 ** 15, frequency=50)  #setting up servo
 servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 
 while True: 
