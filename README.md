@@ -3,7 +3,7 @@
 
 ## Table of Contents
 * [Launchpad 1-Countdown](#Launchpad_1-Countdown)
-* [Onshape_Assignment_Template](#onshape_assignment_template)
+* [Launchpad 2-LED](#Launchpad_2-LED)
 
 
 ## Launchpad_1-Countdown
@@ -32,7 +32,7 @@ print("LAUNCHY")   #say dis
 This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
 
 
-## Launchpad_2_LED
+## Launchpad_2-LED
 
 ### Assignment Description
 
