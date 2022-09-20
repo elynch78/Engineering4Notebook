@@ -4,7 +4,7 @@
 ## Table of Contents
 * [Launchpad 1-Countdown](#Launchpad_1-Countdown)
 * [Launchpad 2-LED](#Launchpad_2-LED)
-
+* [Launchpad 3-Button](#Launchpad_3-Button)
 
 ## Launchpad_1-Countdown
 
@@ -78,16 +78,50 @@ I had trouble figuring out the positioning of the code because one led has to be
 
 
 
-## Media Test
+## Launchpad_3-Button
 
-### Test Link
+### Assignment Description
 
-[link](https://github.com/elynch78/Engineering4Notebook/blob/main/raspberry-pi/test.py)
+Today Gaby and I created code so that our countdown and leds will start at the press of a button. (To mimic a more realistic countdown sequence)
 
-### Test Image
+### Wiring
 
-![](images/topgunsunset.jpg)
+<img src="images/L3BUTTON.jpeg" alt="" width="200" height="200" />
 
-### Test GIF
 
-![](images/mr305.gif)
+### Code
+
+``` python
+
+import time #imports
+import board
+import digitalio
+
+led1 = digitalio.DigitalInOut(board.GP13) #pins 
+led1.direction = digitalio.Direction.OUTPUT
+led2 = digitalio.DigitalInOut(board.GP18)
+led2.direction = digitalio.Direction.OUTPUT
+button = digitalio.DigitalInOut(board.GP16) #adds in the button
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP #incorperates the button into the circuit
+
+while True: #if the button is pressed this will happen
+     if button.value == False:
+          for x in reversed(range(11)):
+               led1.value = True #light bright
+               time.sleep(0.5) #light snooze
+               print(x)
+               led1.value = False #light off
+               time.sleep(0.5)
+          while True:
+               print("liftoff!") #says dis
+               led2.value = True
+               time.sleep(0.5)
+ 
+ ```
+
+### Reflection
+
+
+
+
