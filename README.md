@@ -14,7 +14,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
-![vid](images/countdown.gif)
+![Link to proof](images/countdown.gif)
 
 ### Code
 
@@ -39,6 +39,9 @@ This was a relatively simple assignment, we learned how to use range through [th
 Today Gaby and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. This will be useful later in the year if we need LEDs for our project or something that functions similarly either through code or practice. 
 
 
+### Evidence
+
+![Link to proof](images/ledgif.mp4)
 
 
 ### Wiring
@@ -83,6 +86,11 @@ I had trouble figuring out the positioning of the code because one led has to be
 ### Assignment Description
 
 Today Gaby and I created code so that our countdown and leds will start at the press of a button. (To mimic a more realistic countdown sequence)
+
+
+### Evidence
+
+![Link to proof](images/buttongif.mp4)
 
 ### Wiring
 
