@@ -1,14 +1,12 @@
 # Engineering_4_Notebook
 
-&nbsp;
 
 ## Table of Contents
-* [Raspberry_Pi_Assignment_Template](#raspberry_pi_assignment_template)
+* [Launchpad 1-Countdown](#Launchpad_1-Countdown)
 * [Onshape_Assignment_Template](#onshape_assignment_template)
 
-&nbsp;
 
-## Raspberry_Pi_Assignment_Template
+## Launchpad_1-Countdown
 
 ### Assignment Description
 
@@ -16,7 +14,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
- ![vid](images/countdown.gif)
+![vid](images/countdown.gif)
 
 ### Code
 
@@ -33,27 +31,52 @@ print("LAUNCHY")   #say dis
 
 This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
 
-&nbsp;
 
-## Onshape_Assignment_Template
+## Launchpad_2_LED
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Today Gaby and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. This will be useful later in the year if we need LEDs for our project or something that functions similarly either through code or practice. 
 
-### Part Link 
 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
 
-### Part Image
 
-Take a nice screenshot of your Onshape document. 
+### Wiring
+
+<img src="images/L2LED.jpg" alt="" width="200" height="200" />
+
+
+### Code
+
+``` python
+
+import time #Imports variables
+import board
+import digitalio 
+
+led1 = digitalio.DigitalInOut(board.GP13) #where the stuff is at
+led1.direction = digitalio.Direction.OUTPUT #gives direcction
+led2 = digitalio.DigitalInOut(board.GP18) 
+led2.direction = digitalio.Direction.OUTPUT 
+
+for x in reversed(range(11)): 
+    led1.value = True #turns light on
+    time.sleep(0.5) #wait time
+    print(x) #tells it what to say
+    led1.value = False #turns led off
+    time.sleep(0.5) 
+while True:
+    print("liftoff!") #what to say
+    led2.value = True #turns red light on
+    time.sleep(0.5) #hits snooze
+ 
+ ```
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds so it's important to label things because it makes things more organized and easier to use or understand later on. 
 
-&nbsp;
+
 
 ## Media Test
 
