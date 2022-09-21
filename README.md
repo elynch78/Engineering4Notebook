@@ -1,14 +1,13 @@
 # Engineering_4_Notebook
 
-&nbsp;
 
 ## Table of Contents
-* [Raspberry_Pi_Assignment_Template](#raspberry_pi_assignment_template)
-* [Onshape_Assignment_Template](#onshape_assignment_template)
+* [Launchpad 1-Countdown](#Launchpad_1-Countdown)
+* [Launchpad 2-LED](#Launchpad_2-LED)
+* [Launchpad 3-Button](#Launchpad_3-Button)
+* [Launchpad 4-Servo](#Launchpad_4-Servo)
 
-&nbsp;
-
-## Raspberry_Pi_Assignment_Template
+## Launchpad_1-Countdown
 
 ### Assignment Description
 
@@ -16,7 +15,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
- ![vid](images/countdown.gif)
+![Link to proof](images/countdown.gif)
 
 ### Code
 
@@ -33,38 +32,164 @@ print("LAUNCHY")   #say dis
 
 This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
 
-&nbsp;
 
-## Onshape_Assignment_Template
+## Launchpad_2-LED
 
 ### Assignment Description
 
-Write your assignment description here. What is the purpose of this assignment? It should be at least a few sentences.
+Today Gaby and I created code to make a red light flash as the serial monitor counts down from ten and then flashes a red light when the word 'launch' is printed. This will be useful later in the year if we need LEDs for our project or something that functions similarly either through code or practice. 
 
-### Part Link 
 
-[Create a link to your Onshape document](https://cvilleschools.onshape.com/documents/003e413cee57f7ccccaa15c2/w/ea71050bb283bf3bf088c96c/e/c85ae532263d3b551e1795d0?renderMode=0&uiState=62d9b9d7883c4f335ec42021). Don't forget to turn on link sharing in your Onshape document so that others can see it. 
+### Evidence
 
-### Part Image
+![Link to proof](images/ledgif.mp4)
 
-Take a nice screenshot of your Onshape document. 
+
+### Wiring
+
+<img src="images/L2LED.jpg" alt="" width="200" height="200" />
+
+
+### Code
+
+``` python
+
+import time #Imports variables
+import board
+import digitalio 
+
+led1 = digitalio.DigitalInOut(board.GP13) #where the stuff is at
+led1.direction = digitalio.Direction.OUTPUT #gives direcction
+led2 = digitalio.DigitalInOut(board.GP18) 
+led2.direction = digitalio.Direction.OUTPUT 
+
+for x in reversed(range(11)): 
+    led1.value = True #turns light on
+    time.sleep(0.5) #wait time
+    print(x) #tells it what to say
+    led1.value = False #turns led off
+    time.sleep(0.5) 
+while True:
+    print("liftoff!") #what to say
+    led2.value = True #turns red light on
+    time.sleep(0.5) #hits snooze
+ 
+ ```
 
 ### Reflection
 
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience? Your goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person. Think about your audience for this one, which may be "future you" (when you realize you need some of this code in three months), me, or your college admission committee!
+I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds so it's important to label things because it makes things more organized and easier to use or understand later on. 
 
-&nbsp;
 
-## Media Test
 
-### Test Link
+## Launchpad_3-Button
 
-[link](https://github.com/elynch78/Engineering4Notebook/blob/main/raspberry-pi/test.py)
+### Assignment Description
 
-### Test Image
+Today Gaby and I created code so that our countdown and leds will start at the press of a button. (To mimic a more realistic countdown sequence)
 
-![](images/topgunsunset.jpg)
 
-### Test GIF
+### Evidence
 
-![](images/mr305.gif)
+![Link to proof](images/buttongif.mp4)
+
+### Wiring
+
+<img src="images/L3BUTTON.jpeg" alt="" width="200" height="200" />
+
+
+### Code
+
+``` python
+
+import time #imports
+import board
+import digitalio
+
+led1 = digitalio.DigitalInOut(board.GP13) #pins 
+led1.direction = digitalio.Direction.OUTPUT
+led2 = digitalio.DigitalInOut(board.GP18)
+led2.direction = digitalio.Direction.OUTPUT
+button = digitalio.DigitalInOut(board.GP16) #adds in the button
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP #incorperates the button into the circuit
+
+while True: #if the button is pressed this will happen
+     if button.value == False:
+          for x in reversed(range(11)):
+               led1.value = True #light bright
+               time.sleep(0.5) #light snooze
+               print(x)
+               led1.value = False #light off
+               time.sleep(0.5)
+          while True:
+               print("liftoff!") #says dis
+               led2.value = True
+               time.sleep(0.5)
+ 
+ ```
+
+### Reflection
+
+Alright, so as someone with very limited experience and liking for coding, this took a lot of questions and thinking. I was still just adding on to my previous code, but I have never used a button, much less coded for it so that was new. First off, I didn't know where to put the new code (again). I had to add "if button.value == False:" and then tab everything over a bunch under it. This makes it so that once you press the button everything else follows. 
+
+
+
+## Launchpad_4-Servo
+
+### Assignment Description
+
+Today Gaby and I had to add on to our countdown code again so that a servo will turn 180 degrees at the end of the ciruit and mimic the liftoff. 
+
+### Evidence
+
+![Link to proof](images/IMG-4190.MOV)
+
+### Wiring
+
+
+### Code
+
+``` python
+import time    #importing stuff
+import board
+import digitalio
+import pwmio 
+from adafruit_motor import servo
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT
+led2 = digitalio.DigitalInOut(board.GP18)
+led2.direction = digitalio.Direction.OUTPUT
+button = digitalio.DigitalInOut(board.GP16)  #what stuff is going in vs out and where it's at
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+pwm_servo = pwmio.PWMOut(board.GP5, duty_cycle=2 ** 15, frequency=50)  #setting up servo
+servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
+
+servo1.angle = 0
+
+
+while True: 
+     if button.value == False:    #so when we aren't pressing it anymore
+          for x in reversed(range(11)):
+               led1.value = True
+               time.sleep(0.5)     #rest a sec between counts
+               print(x)
+               led1.value = False
+               time.sleep(0.5)
+          while True:
+               print("liftoff!")     #say liftoff
+               led2.value = True
+               servo1.angle = 180     #turn180
+               time.sleep(0.5)
+              
+```
+
+### Reflection
+
+The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. 
+
+
+
+
