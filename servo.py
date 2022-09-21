@@ -14,6 +14,9 @@ button.pull = digitalio.Pull.UP
 pwm_servo = pwmio.PWMOut(board.GP5, duty_cycle=2 ** 15, frequency=50)  #setting up servo
 servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 
+servo1.angle = 0
+
+
 while True: 
      if button.value == False:    #so when we aren't pressing it anymore
           for x in reversed(range(11)):
