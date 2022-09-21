@@ -49,7 +49,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
-![Link to proof](images/countdown.gif)
+![Link to proof](images/Untitled.mp4)
 
 ### Code
 
