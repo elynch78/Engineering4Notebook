@@ -2,10 +2,44 @@
 
 
 ## Table of Contents
+* [Pico Intro](#Pico_Intro)
 * [Launchpad 1-Countdown](#Launchpad_1-Countdown)
 * [Launchpad 2-LED](#Launchpad_2-LED)
 * [Launchpad 3-Button](#Launchpad_3-Button)
 * [Launchpad 4-Servo](#Launchpad_4-Servo)
+
+
+## Pico_Intro
+
+### Assignment Description
+
+I had to get my pico to blink it's led. 
+
+### Evidence 
+
+![Link to proof](images/IMG-4190.MOV)
+
+### Code
+
+``` python
+import time
+import board
+import digitalio
+
+led = digitalio.DigitalInOut(board.LED)
+led.direction = digitalio.Direction.OUTPUT
+
+while True:
+    led.value = True
+    time.sleep(0.5)
+    led.value = False
+    time.sleep(0.5)
+
+```
+
+### Reflection
+
+This was really easy because I did it after doing all the harder assignments . 
 
 ## Launchpad_1-Countdown
 
