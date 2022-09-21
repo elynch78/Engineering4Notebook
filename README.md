@@ -143,7 +143,7 @@ Today Gaby and I had to add on to our countdown code again so that a servo will 
 
 ### Evidence
 
-![](images/IMG-4190.MOV)
+![Link to proof](images/IMG-4190.MOV)
 
 ### Wiring
 
