@@ -5,6 +5,7 @@
 * [Launchpad 1-Countdown](#Launchpad_1-Countdown)
 * [Launchpad 2-LED](#Launchpad_2-LED)
 * [Launchpad 3-Button](#Launchpad_3-Button)
+* [Launchpad 4-Servo](#Launchpad_4-Servo)
 
 ## Launchpad_1-Countdown
 
@@ -131,5 +132,27 @@ while True: #if the button is pressed this will happen
 ### Reflection
 
 Alright, so as someone with very limited experience and liking for coding, this took a lot of questions and thinking. I was still just adding on to my previous code, but I have never used a button, much less coded for it so that was new. First off, I didn't know where to put the new code (again). I had to add "if button.value == False:" and then tab everything over a bunch under it. This makes it so that once you press the button everything else follows. 
+
+
+
+## Launchpad_4-Servo
+
+### Assignment Description
+
+Today Gaby and I had to add on to our countdown code again so that a servo will turn 180 degrees at the end of the ciruit and mimic the liftoff. 
+
+### Evidence
+
+![](images/IMG-4190.MOV)
+
+### Wiring
+
+
+
+
+
+
+
+
 
 
