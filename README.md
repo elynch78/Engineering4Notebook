@@ -129,7 +129,7 @@ Today Gaby and I created code so that our countdown and leds will start at the p
 
 ### Wiring
 
-<img src="images/L3BUTTON.jpeg" alt="" width="200" height="200" />
+<img src="images/L3BUTTON.jpeg" alt="" width="250" height="250" />
 
 
 ### Code
@@ -181,6 +181,7 @@ Today Gaby and I had to add on to our countdown code again so that a servo will 
 
 ### Wiring
 
+<img src="images/servo.jpeg" alt="" width="250" height="250" />
 
 ### Code
 
