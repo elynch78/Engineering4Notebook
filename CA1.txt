@@ -1,6 +1,0 @@
-import adafruit_mpu6050
-import busio
-
-sda_pin = board.your_sda_pin_here
-scl_pin = board.your_scl_pin_here
-i2c = busio.I2C(scl_pin, sda_pin)
