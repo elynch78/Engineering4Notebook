@@ -259,5 +259,5 @@ while True:
 
 ### Reflection
 I found the basis for my code online 
-
+https://learn.adafruit.com/mpu6050-6-dof-accelerometer-and-gyro/python-and-circuitpython
 
