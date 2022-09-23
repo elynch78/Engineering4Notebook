@@ -7,7 +7,7 @@
 * [Launchpad 2-LED](#Launchpad_2-LED)
 * [Launchpad 3-Button](#Launchpad_3-Button)
 * [Launchpad 4-Servo](#Launchpad_4-Servo)
-
+* [Crash Avoidance P1](#Crash_Avidance_P1)
 
 ## Pico_Intro
 
@@ -226,5 +226,38 @@ while True:
 The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. 
 
 
+## Crash_Avoidance_P1
 
+### Assignment Description
+
+I had to get an accelerometer working so that it read Acceleration, Gyro, and temperature values on the serial monitor.  
+
+### Evidence 
+
+![](images/P1.gif)
+
+### Code
+
+``` python
+import time #imports stuff
+import board
+import adafruit_mpu6050
+import busio
+
+sda_pin = board.GP14  #sets up i2c
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)  #sets up accelerometer
+mpu = adafruit_mpu6050.MPU6050(i2c)
+
+while True:
+    print("Acceleration: X:%.2f, Y: %.2f, Z: %.2f m/s^2" % (mpu.acceleration))
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro))  #things serial monitor needs to read
+    print("Temperature: %.2f C" % mpu.temperature)
+    print("")
+    time.sleep(1)
+```
+
+### Reflection
+I found the basis for my code online 
+https://learn.adafruit.com/mpu6050-6-dof-accelerometer-and-gyro/python-and-circuitpython
 
