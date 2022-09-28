@@ -7,8 +7,8 @@
 * [Launchpad 2-LED](#Launchpad_2-LED)
 * [Launchpad 3-Button](#Launchpad_3-Button)
 * [Launchpad 4-Servo](#Launchpad_4-Servo)
-* [Crash Avoidance P1](#Crash_Avidance_P1)
-* [Crash Avoidance P2](#Crash_Avidance_P2)
+* [Crash Avoidance P1](#Crash_Avoidance_P1)
+* [Crash Avoidance P2](#Crash_Avoidance_P2)
 
 ## Pico_Intro
 
