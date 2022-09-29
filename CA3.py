@@ -22,7 +22,15 @@ mpu = adafruit_mpu6050.MPU6050(i2c, address=0x3d) #screen
 while True:
     print(mpu.acceleration)   #say the values
     time.sleep(.5)
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro))
+    splash = displayio.Group()  #create the display group
 
+    title = "ANGULAR VELOCITY" #add title block to display group
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+    splash.append(text_area)  
+    
+    mpu.gyro[0]
+    display.show(splash) #send display group to screen
     if mpu.acceleration[0] < -9 or mpu.acceleration[0] > 9:
         led_red.value = True  #at 90 degrees led is on
 
