@@ -9,6 +9,7 @@
 * [Launchpad 4-Servo](#Launchpad_4-Servo)
 * [Crash Avoidance P1](#Crash_Avoidance_P1)
 * [Crash Avoidance P2](#Crash_Avoidance_P2)
+* [Crash Avoidance P3](#Crash_Avoidance_P3)
 
 ## Pico_Intro
 
@@ -268,4 +269,77 @@ while True:
 ### Reflection
 
 The code was confusing for this but Max helped us so it was fine. I had the wrong setup for 90 degree acceleration values but after that was fixed the thing worked smoothly. 
+
+
+## Crash_Avoidance_P3
+
+### Assignment Description
+
+I had to get my led to blink at 90 degrees and print gyro xyz values onto a screen as well. 
+
+### Evidence 
+
+![](images/CA3.gif)
+
+### Code
+
+``` python
+import board  #import shit
+import adafruit_mpu6050
+import busio 
+import time
+import digitalio 
+import terminalio
+import displayio
+from adafruit_display_text import label
+import adafruit_displayio_ssd1306
+
+displayio.release_displays()
+sda_pin = board.GP14   #setup pico
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+display_bus = displayio.I2CDisplay(i2c, device_address=0x3d, reset=board.GP28)
+display = adafruit_displayio_ssd1306.SSD1306(display_bus, width=128, height=64)
+led_red = digitalio.DigitalInOut(board.GP18)   #led setup
+led_red.direction = digitalio.Direction.OUTPUT
+
+mpu = adafruit_mpu6050.MPU6050(i2c, address=0x68) #accelerometer
+
+
+while True:
+    print(mpu.acceleration)   #say the values
+    time.sleep(.5)
+    print("Gyro X:%.2f, Y: %.2f, Z: %.2f rad/s" % (mpu.gyro))
+    splash = displayio.Group()  #create the display group
+
+    title = "ANGULAR VELOCITY" #add title block to display group
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=5)
+    splash.append(text_area) 
+
+    title = f"x: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=15)
+    splash.append(text_area)  
+    
+    title = f"y: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=30)
+    splash.append(text_area) 
+
+    title = f"z: {mpu.gyro[0]}" 
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=45)
+    splash.append(text_area)
+
+
+    display.show(splash) #send display group to screen
+    if mpu.acceleration[0] < -9 or mpu.acceleration[0] > 9:
+        led_red.value = True  #at 90 degrees led is on
+
+    else:
+        led_red.value = False  #if not led is off
+
+```
+
+### Reflection
+
+The setup for the accelerometer and the screen was pretty straightforward but the code for the xyz values had me confused for a bit. Once I figured out how to do the code for x values to show up on the screen, I was able to set up the y and z values right after. 
+
 
