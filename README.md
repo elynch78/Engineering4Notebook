@@ -271,7 +271,7 @@ I had to get an accelerometer working so that when it was 90 degrees an led woul
 
 ### Evidence 
 
-![](images/P1.gif)
+![](images/CA2.gif)
 
 ### Code
 
