@@ -425,6 +425,6 @@ except:
 
 ### Reflection
 
-Honestly this was pretty confusing, especially since I hate math and coding, but once I figured out how to use try and set up each coordinate it went smoothly. The area equation actually turned out to be kinda simple which saved me brainpower. 
+Honestly this was pretty confusing, especially since I hate math and coding, but once I figured out how to use try and set up each coordinate it went smoothly. The area equation actually turned out to be kinda simple which saved me braincells. 
 
 
