@@ -353,15 +353,15 @@ while True:
     splash.append(text_area) 
 
     title = f"x: {mpu.gyro[0]}" 
-    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=15)
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=15) # determines and prints x value
     splash.append(text_area)  
     
     title = f"y: {mpu.gyro[0]}" 
-    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=30)
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=30) # figures and and says y value
     splash.append(text_area) 
 
     title = f"z: {mpu.gyro[0]}" 
-    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=45)
+    text_area = label.Label(terminalio.FONT, text=title, color=0xFFFF00, x=5, y=45) # same thing with z
     splash.append(text_area)
 
 
@@ -394,35 +394,37 @@ I had to get my serial monitor to take my chosen coordinates of a triangl and te
 ``` python
 import math
 def tri_area(x1, y1, x2, y2, x3, y3):
-    niceAreaValue = (abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))/2
-    print(f"The area of the triangle with vertices ({x1}, {y1}), ({x2}, {y2}), ({x3}, {y3}) is {niceAreaValue}")
+    niceAreaValue = (abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))/2   # the math is mathing
+    print(f"The area of the triangle with vertices ({x1}, {y1}), ({x2}, {y2}), ({x3}, {y3}) is {niceAreaValue}")  # print coordinates so you can fill it out
 while True:
     try:
-        txt1 = input("Input coord set 1 (x,y)")
+        txt1 = input("Input coord set 1 (x,y)") # input coordinates
         set1 = txt1.split(",")
 
         a1 = float(set1[0])
         b1 = float(set1[1])
 
-        txt2 = input("Input coord set 2 (x,y)")
+        txt2 = input("Input coord set 2 (x,y)")  # input coordinates
         set2 = txt2.split(",")
 
         a2 = float(set2[0])
         b2 = float(set2[1])
 
-        txt3 = input("Input coord set 3 (x,y)")
+        txt3 = input("Input coord set 3 (x,y)") # input coordinates
         set3 = txt3.split(",")
 
         a3 = float(set3[0])
         b3 = float(set3[1])
 
         tri_area(a1, b1, a2, b2, a3, b3)
-    except:
-        print("Please input valid coordinates (remember format x,y)")
+
+except:
+        print("Please input valid coordinates (remember format x,y)")  # if u suck, it lets you know
 
 ```
 
 ### Reflection
 
+Honestly this was pretty confusing, especially since I hate math and coding, but once I figured out how to use try and set up each coordinate it went smoothly. The area equation actually turned out to be kinda simple which saved me brainpower. 
 
 
