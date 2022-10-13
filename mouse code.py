@@ -1,0 +1,1 @@
+ mouse1 = input("Mourse code set 1 (x,y)")
