@@ -21,7 +21,7 @@ I had to get my pico to blink it's led.
 
 ### Evidence 
 
-![Link to proof](images/IMG-4190.MOV)
+![](images/the1.gif)
 
 ### Code
 
@@ -53,7 +53,7 @@ I worked with Gaby to code a 10 second countdown on Python that tells you to lau
 
 ### Evidence 
 
-![Link to proof](images/Untitled.mp4)
+![](images/the2.gif)
 
 ### Code
 
