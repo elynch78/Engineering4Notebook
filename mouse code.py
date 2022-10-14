@@ -1,9 +1,4 @@
- mouse1 = input("Mouse code set 1 (x,y)")
-
-for letter in message: # use MORSE_CODE[letter] here to translate from input into morse code
-
-
- MORSE_CODE = { 'A':'.-', 'B':'-...',
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
     'I':'..', 'J':'.---', 'K':'-.-',
@@ -18,3 +13,10 @@ for letter in message: # use MORSE_CODE[letter] here to translate from input int
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'}
+
+
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   print(letter)
