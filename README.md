@@ -521,7 +521,7 @@ This was even more confusing, but with Ian's help it went pretty smoothly. Our b
 
 
 
-##Morse_Code_P1
+## Morse_Code_P1
 
 ### Assignment Description
 
@@ -567,7 +567,7 @@ print(cheese) #write it
 
 ### Reflection
 
-This was really easy because I did it after doing all the harder assignments . 
+This was pretty straight forward once I actually put effort into it. My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. 
 
 
 
