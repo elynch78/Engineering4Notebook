@@ -13,6 +13,7 @@
 * [Landing Area P1](#Landing_Area_P1)
 * [Landing Area P2](#Landing_Area_P2)
 * [Morse Code P1](#Morse_Code_P1)
+* [Morse Code P2](#Morse_Code_P2)
 
 ## Pico_Intro
 
@@ -570,6 +571,85 @@ print(cheese) #write it
 This was pretty straight forward once I actually put effort into it. My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. 
 
 
+
+## Morse_Code_P1
+
+### Assignment Description
+
+I had to write code so that when you type a mesage into the terminal, it's translated into morse code and then an LED blinks to spell out the message. 
+
+### Evidence 
+
+![](images/cheesestring.gif)
+
+### Code
+
+``` python
+import board
+import digitalio
+import time #imports
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary, goes on top
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ',':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    ' ': '/',
+    '(':'-.--.', ')':'-.--.-'}
+
+modifier = 0.25
+dot_time = 1*modifier
+dash_time = 3*modifier  #timing of flashes
+between_taps = 1*modifier
+between_letters = 3*modifier
+between_words = 7*modifier
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT #led setup
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+mouse1 = mouse1.upper() #make things uppercase
+
+cheese = " " #total strings
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   cheese = cheese + (MORSE_CODE[letter]) + " " #stacks letters
+
+print(cheese) #write it
+
+for letter in cheese: #sets up spaces bwteen instances
+    if letter == ".": #for dots
+        led1.value = True #led turns on
+        time.sleep(dot_time) #sleeps for the set time for dots
+        led1.value = False #led is off
+
+    if letter == "-": #now for dashes
+        led1.value = True #led on
+        time.sleep(dash_time) #dash sleep time
+        led1.value = False #led off
+
+    if letter == " ": #for spaces
+        time.sleep(between_letters)  #rest for set space time between letters
+
+    if letter == "/":  #for spaces between words which show as dashes
+        time.sleep(between_words) #rest between words for set time
+
+    
+    time.sleep(dot_time) #stop led between uses of the code
+    
+```
+
+### Reflection
+This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it.After adding Mr. Miller's code for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing.  
 
 
 
