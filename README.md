@@ -12,6 +12,7 @@
 * [Crash Avoidance P3](#Crash_Avoidance_P3)
 * [Landing Area P1](#Landing_Area_P1)
 * [Landing Area P2](#Landing_Area_P2)
+* [Morse Code P1](#Morse_Code_P1)
 
 ## Pico_Intro
 
@@ -517,6 +518,58 @@ while True:
 ### Reflection
 
 This was even more confusing, but with Ian's help it went pretty smoothly. Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangl that was clearly visible on the screen. 
+
+
+
+## Morse_Code_P1
+
+### Assignment Description
+
+I had to write code so that whatever message you type in is then translated into morse code. 
+
+### Evidence 
+
+![](images/cheese1.gif)
+
+### Code
+
+``` python
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ',':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    '(':'-.--.', ')':'-.--.-'}
+
+
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+mouse1 = mouse1.upper() #make things uppercase
+
+cheese = " " #total strings
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   cheese = cheese + (MORSE_CODE[letter]) + " " #stacks letters
+
+print(cheese) #write it
+
+```
+
+### Reflection
+
+This was pretty straight forward once I actually put effort into it. My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. 
+
+
 
 
 
