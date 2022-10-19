@@ -1,3 +1,6 @@
+import board
+import digitalio 
+
 MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary, goes on top
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
@@ -14,6 +17,15 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary, goes on top
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'}
 
+modifier = 0.25
+dot_time = 1*modifier
+dash_time = 3*modifier
+between_taps = 1*modifier
+between_letters = 3*modifier
+between_words = 7*modifier
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT
 
 mouse1 = input("Mouse code set 1 (x,y)")  #input
 mouse1 = mouse1.upper() #make things uppercase
@@ -25,3 +37,4 @@ for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into
 
 print(cheese) #write it
 
+for cheese in mouse1:
