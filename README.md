@@ -379,7 +379,7 @@ while True:
 
 ### Reflection
 
-The setup for the accelerometer and the screen was pretty straightforward but the code for the xyz values had me confused for a bit. Once I figured out how to do the code for x values to show up on the screen, I was able to set up the y and z values right after. 
+I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run ![this code](https://drive.google.com/file/d/1YEmYYJnxZW2rdZCV6Mmu-fHIeQoKGVfL/view) and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. 
 
 
 ## Landing_Area_P1
@@ -428,7 +428,7 @@ except:
 
 ### Reflection
 
-Honestly this was pretty confusing, especially since I hate math and coding, but once I figured out how to use try and set up each coordinate it went smoothly. The area equation actually turned out to be kinda simple which saved me braincells. 
+Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you, saving you time and braincells. 
 
 
 ## Landing_Area_P2
@@ -486,7 +486,7 @@ while True:
         a3 = float(set3[0])
         b3 = float(set3[1])
 
-        tri_area(a1, b1, a2, b2, a3, b3)
+        tri_area(a1, b1, a2, b2, a3, b3)  #area
 
         c1 = int(a1)
         d1 = int(b1)
@@ -518,7 +518,7 @@ while True:
 
 ### Reflection
 
-This was even more confusing, but with Ian's help it went pretty smoothly. Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangl that was clearly visible on the screen. 
+Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangl that was clearly visible on the screen. We adjusted the location of the triangles by adding numbers to the hline which moved the trianlges into visible quadrants of the screen. 
 
 
 
@@ -568,7 +568,7 @@ print(cheese) #write it
 
 ### Reflection
 
-This was pretty straight forward once I actually put effort into it. My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. 
+My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. Using a dictionary is convenient because it allows you to use many variables and in this case, it allows you to use any letter of the alphabet and number/character to express a message. 
 
 
 
