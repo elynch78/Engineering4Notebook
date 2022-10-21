@@ -82,7 +82,7 @@ Today Gaby and I created code to make a red light flash as the serial monitor co
 
 ### Evidence
 
-![Link to proof](images/ledgif.mp4)
+![](images/this2.gif)
 
 
 ### Wiring
