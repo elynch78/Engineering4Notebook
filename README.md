@@ -264,7 +264,7 @@ while True:
 
 ### Reflection
 
-This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.  
+After downloading the necessary folder modules needed for this code, it goes pretty smoothly. You need to have Acceleration, temperature, and gyro in order to find all the values for the assignment. Don't be alarmed by the ~9.8 because that's just gravity and is not going to mess with your values or anything. 
 
 
 ## Crash_Avoidance_P2
@@ -307,8 +307,7 @@ while True:
 
 ### Reflection
 
-The code was confusing for this but Max helped us so it was fine. I had the wrong setup for 90 degree acceleration values but after that was fixed the thing worked smoothly. 
-
+This assignment was actually very easy. After importing everything you setup your led and wiring (double check that you are in the correct pins, i2c are still 2 pins off). The only thing you have to make sure you do is have the correct angle and degrees for the mpu.acceleration, we want it at 90 so when it's vertical the light will come on.
 
 ## Crash_Avoidance_P3
 
@@ -379,7 +378,7 @@ while True:
 
 ### Reflection
 
-I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run ![this code](https://drive.google.com/file/d/1YEmYYJnxZW2rdZCV6Mmu-fHIeQoKGVfL/view) and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. 
+I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run [this code](https://drive.google.com/file/d/1YEmYYJnxZW2rdZCV6Mmu-fHIeQoKGVfL/view) and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. 
 
 
 ## Landing_Area_P1
