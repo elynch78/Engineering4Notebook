@@ -235,7 +235,7 @@ I had to get an accelerometer working and print acceleration, gyro, and temperat
 
 ### Evidence 
 
-![](images/P1.gif)
+![](images/deez2.gif)
 
 ### Code
 
