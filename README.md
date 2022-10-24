@@ -29,23 +29,23 @@ I had to get my pico to blink it's led.
 
 ``` python
 import time
-import board
+import board #import stuff
 import digitalio
 
 led = digitalio.DigitalInOut(board.LED)
-led.direction = digitalio.Direction.OUTPUT
+led.direction = digitalio.Direction.OUTPUT  #led setup
 
 while True:
-    led.value = True
-    time.sleep(0.5)
-    led.value = False
-    time.sleep(0.5)
+    led.value = True  #led on
+    time.sleep(0.5)  #led rest
+    led.value = False  #led off
+    time.sleep(0.5)  #led off
 
 ```
 
 ### Reflection
 
-This was really easy because I did it after doing all the harder assignments . 
+First you have to import your stuff, then you set up the power flowing to the led. Using a while True, you turn the led on and then make it rest .5 seconds. Then you turn it off and have it rest again so it has been reset for the next usage. 
 
 ## Launchpad_1-Countdown
 
@@ -70,8 +70,7 @@ print("LAUNCHY")   #say dis
 
 ### Reflection
 
-This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
-
+This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. The code works together by providing the range of available numbers and then telling it to coundown slowly for legibility before printing LAUNCH. 
 
 ## Launchpad_2-LED
 
@@ -118,9 +117,7 @@ while True:
 
 ### Reflection
 
-I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds so it's important to label things because it makes things more organized and easier to use or understand later on. 
-
-
+I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds.Proving the idea that it's important to label things because it makes things more organized and easier to use or understand later on. 
 
 ## Launchpad_3-Button
 
@@ -131,7 +128,7 @@ Today Gaby and I created code so that our countdown and leds will start at the p
 
 ### Evidence
 
-![Link to proof](images/buttongif.mp4)
+![Link to proof](images/butt1.gif)
 
 ### Wiring
 
@@ -172,7 +169,6 @@ while True: #if the button is pressed this will happen
 ### Reflection
 
 Alright, so as someone with very limited experience and liking for coding, this took a lot of questions and thinking. I was still just adding on to my previous code, but I have never used a button, much less coded for it so that was new. First off, I didn't know where to put the new code (again). I had to add "if button.value == False:" and then tab everything over a bunch under it. This makes it so that once you press the button everything else follows. 
-
 
 
 ## Launchpad_4-Servo
@@ -229,7 +225,7 @@ while True:
 
 ### Reflection
 
-The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. 
+We decided to set the servo angle to 0 so that our servo would start from the same place each time because we realized after running the code a couple times, the servo would be in the wrong starting position and not work as well.  We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. Using button.value == False, I was able to set up the code so that the while true would run once I finished pressing the button. 
 
 ## Crash_Avoidance_P1
 
