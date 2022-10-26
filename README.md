@@ -237,6 +237,10 @@ I had to get an accelerometer working and print acceleration, gyro, and temperat
 
 ![](images/deez2.gif)
 
+### Evidence 
+
+![](images/crash1.jpeg)
+
 ### Code
 
 ``` python
@@ -272,6 +276,10 @@ I had to get an accelerometer working so that when it was 90 degrees an led woul
 ### Evidence 
 
 ![](images/CA2.gif)
+
+### Evidence 
+
+![](images/crash2.jpeg)
 
 ### Code
 
@@ -314,6 +322,10 @@ I had to get my led to blink at 90 degrees and print gyro xyz values onto a scre
 ### Evidence 
 
 ![](images/CA3.gif)
+
+### Evidence 
+
+![](images/crash3.jpg)
 
 ### Code
 
@@ -435,6 +447,10 @@ I had to get my serial monitor to take my chosen coordinates of a triangl and te
 ### Evidence 
 
 ![](images/fu1.gif)
+
+### Evidence 
+
+![](images/land2.jpeg)
 
 ### Code
 
