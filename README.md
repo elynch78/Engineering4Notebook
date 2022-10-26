@@ -237,9 +237,9 @@ I had to get an accelerometer working and print acceleration, gyro, and temperat
 
 ![](images/deez2.gif)
 
-### Evidence 
+### Wiring 
 
-![](images/crash1.jpeg)
+<img src="images/crash1.jpeg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -277,9 +277,9 @@ I had to get an accelerometer working so that when it was 90 degrees an led woul
 
 ![](images/CA2.gif)
 
-### Evidence 
+### Wiring 
 
-![](images/crash2.jpeg)
+<img src="images/crash2.jpeg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -323,7 +323,7 @@ I had to get my led to blink at 90 degrees and print gyro xyz values onto a scre
 
 ![](images/CA3.gif)
 
-### Evidence 
+### Wiring 
 
 ![](images/crash3.jpg)
 
@@ -448,9 +448,9 @@ I had to get my serial monitor to take my chosen coordinates of a triangl and te
 
 ![](images/fu1.gif)
 
-### Evidence 
+### Wiring 
 
-![](images/land2.jpeg)
+<img src="images/land2.jpg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -592,6 +592,10 @@ I had to write code so that when you type a mesage into the terminal, it's trans
 ### Evidence 
 
 ![](images/cheesestring.gif)
+
+### Wiring 
+
+<img src="images/crash1.jpg" alt="" width="250" height="250" />
 
 ### Code
 
