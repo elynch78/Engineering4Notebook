@@ -595,7 +595,7 @@ I had to write code so that when you type a mesage into the terminal, it's trans
 
 ### Wiring 
 
-<img src="images/crash1.jpg" alt="" width="250" height="250" />
+<img src="images/last1.jpg" alt="" width="250" height="250" />
 
 ### Code
 
