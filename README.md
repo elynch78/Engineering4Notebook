@@ -678,7 +678,7 @@ We had to design a beam that would hold as much weight as possible without break
 
 ### Evidence 
 
-![](images/holder1.png)
+<img src="images/holder1.png" alt="" width="400" height="400" />
 
 ### Reflection
 
@@ -693,7 +693,7 @@ We had to run one static finite element analysis sim on our beam to see what are
 
 ### Evidence
 
-![](images/sim1.PNG)
+<img src="images/sim1.PNG" alt="" width="400" height="400" />
 
 ### Reflection
 
@@ -708,18 +708,12 @@ We had to improve our beam after seeing it fail in the simulation from bending t
 
 ### Evidence
 
-![](images/sim2.PNG)
+<img src="images/sim2.PNG" alt="" width="400" height="350" />
 
-![](images/
+<img src="images/beam2.PNG" alt="" width="400" height="350" />
 
 ### Reflection
 
 We decided to make the walls taller and add diamond holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we beefed up the end of the beam that held the bucket with the washer and bolt. 
-
-
-
-
-
-
 
 
