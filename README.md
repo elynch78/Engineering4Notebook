@@ -668,4 +668,56 @@ for letter in cheese: #sets up spaces bwteen instances
 This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it.After adding Mr. Miller's code for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing.  
 
 
+## FEA_Part1
+
+### Assignment Description
+
+We had to design a beam that would hold as much weight as possible without breaking or bending more than 35mm. 
+
+### Evidence 
+
+![](images/holder1.png)
+
+### Reflection
+
+We went for a simple design at first that we thought would be more stable than a complex one. We had walls and had 2 triangular rows going through the center of the beam, to increase flexibility so the beam wouldn't snap. The weight was within criteria but the end of our beam seemed thin to support a bucket and excess weight, we addressed that problem after using the sim in the next part of the assignment. 
+
+
+## FEA_Part2
+
+### Assignment Description
+
+We had to run one static finite element analysis sim on our beam to see what areas needed improvement and what went well as a whole. 
+
+### Evidence
+
+![](images/sim1.PNG)
+
+### Reflection
+
+This sim showed that our simple design kind of sucked. The beam bent way over the 35mm allowed, but it didn't show a break instance anywhere so that was impressive. We decided that our design was too weak and had to adjust so it would hold itself up.
+
+
+## FEA_Part3
+
+### Assignment description
+
+We had to improve our beam after seeing it fail in the simulation from bending too much and run our improved design in the sim again. 
+
+### Evidence
+
+![](images/sim2.PNG)
+
+![](images/
+
+### Reflection
+
+We decided to make the walls taller and add diamond holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we beefed up the end of the beam that held the bucket with the washer and bolt. 
+
+
+
+
+
+
+
 
