@@ -693,7 +693,7 @@ We had to run one static finite element analysis sim on our beam to see what are
 
 ### Evidence
 
-<img src="images/sim1.PNG" alt="" width="400" height="400" />
+<img src="images/sim1.PNG" alt="" width="450" height="400" />
 
 ### Reflection
 
@@ -708,9 +708,9 @@ We had to improve our beam after seeing it fail in the simulation from bending t
 
 ### Evidence
 
-<img src="images/sim2.PNG" alt="" width="400" height="350" />
+<img src="images/sim2.PNG" alt="" width="700" height="350" />
 
-<img src="images/beam2.PNG" alt="" width="400" height="350" />
+<img src="images/beam2.PNG" alt="" width="600" height="350" />
 
 ### Reflection
 
