@@ -14,7 +14,9 @@
 * [Landing Area P2](#Landing_Area_P2)
 * [Morse Code P1](#Morse_Code_P1)
 * [Morse Code P2](#Morse_Code_P2)
-
+* [FEA_Part1](#FEA_Part1)
+* [FEA_Part2](#FEA_Part2)
+* [FEA_Part3](#FEA_Part3)
 
 ## Pico_Intro
 
