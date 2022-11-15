@@ -726,7 +726,7 @@ We had to design the ring part of the Helicopter cad assignment.
 
 ### Evidence
 
-<img src="images/ring.PNG" alt="" width="700" height="350" />
+<img src="images/ring.PNG" alt="" width="350" height="500" />
 
 ### Reflection
 
