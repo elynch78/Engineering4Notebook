@@ -17,6 +17,7 @@
 * [FEA_Part1](#FEA_Part1)
 * [FEA_Part2](#FEA_Part2)
 * [FEA_Part3](#FEA_Part3)
+* [CAD_Ring](#CAD_Ring)
 
 ## Pico_Intro
 
@@ -715,5 +716,20 @@ We had to improve our beam after seeing it fail in the simulation from bending t
 ### Reflection
 
 We decided to make the walls taller and add diamond holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we beefed up the end of the beam that held the bucket with the washer and bolt. 
+
+
+## Cad_Ring
+
+### Assignment description
+
+We had to design the ring part of the Helicopter cad assignment. 
+
+### Evidence
+
+<img src="images/ring.PNG" alt="" width="700" height="350" />
+
+### Reflection
+
+ This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.
 
 
