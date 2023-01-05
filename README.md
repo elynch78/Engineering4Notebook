@@ -13,6 +13,11 @@
 * [Landing Area P1](#Landing_Area_P1)
 * [Landing Area P2](#Landing_Area_P2)
 * [Morse Code P1](#Morse_Code_P1)
+* [Morse Code P2](#Morse_Code_P2)
+* [FEA_Part1](#FEA_Part1)
+* [FEA_Part2](#FEA_Part2)
+* [FEA_Part3](#FEA_Part3)
+* [CAD_Ring](#CAD_Ring)
 
 ## Pico_Intro
 
@@ -28,23 +33,23 @@ I had to get my pico to blink it's led.
 
 ``` python
 import time
-import board
+import board #import stuff
 import digitalio
 
 led = digitalio.DigitalInOut(board.LED)
-led.direction = digitalio.Direction.OUTPUT
+led.direction = digitalio.Direction.OUTPUT  #led setup
 
 while True:
-    led.value = True
-    time.sleep(0.5)
-    led.value = False
-    time.sleep(0.5)
+    led.value = True  #led on
+    time.sleep(0.5)  #led rest
+    led.value = False  #led off
+    time.sleep(0.5)  #led off
 
 ```
 
 ### Reflection
 
-This was really easy because I did it after doing all the harder assignments . 
+First you have to import your stuff, then you set up the power flowing to the led. Using a while True, you turn the led on and then make it rest .5 seconds. Then you turn it off and have it rest again so it has been reset for the next usage. 
 
 ## Launchpad_1-Countdown
 
@@ -69,8 +74,7 @@ print("LAUNCHY")   #say dis
 
 ### Reflection
 
-This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. 
-
+This was a relatively simple assignment, we learned how to use range through [this](https://www.w3schools.com/python/gloss_python_for_range.asp) which makes the countdown work. The time.sleep makes it so there is space between the countdown of numbers. The code works together by providing the range of available numbers and then telling it to coundown slowly for legibility before printing LAUNCH. 
 
 ## Launchpad_2-LED
 
@@ -81,7 +85,7 @@ Today Gaby and I created code to make a red light flash as the serial monitor co
 
 ### Evidence
 
-![Link to proof](images/ledgif.mp4)
+![](images/this2.gif)
 
 
 ### Wiring
@@ -117,9 +121,7 @@ while True:
 
 ### Reflection
 
-I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds so it's important to label things because it makes things more organized and easier to use or understand later on. 
-
-
+I had trouble figuring out the positioning of the code because one led has to be later on becasue it depends on the countdown being finished vs happening at the same time. Originally our red led was not working and we thought it was the code, but the problem was actually that we had misidentified our leds.Proving the idea that it's important to label things because it makes things more organized and easier to use or understand later on. 
 
 ## Launchpad_3-Button
 
@@ -130,7 +132,7 @@ Today Gaby and I created code so that our countdown and leds will start at the p
 
 ### Evidence
 
-![Link to proof](images/buttongif.mp4)
+![Link to proof](images/butt1.gif)
 
 ### Wiring
 
@@ -173,7 +175,6 @@ while True: #if the button is pressed this will happen
 Alright, so as someone with very limited experience and liking for coding, this took a lot of questions and thinking. I was still just adding on to my previous code, but I have never used a button, much less coded for it so that was new. First off, I didn't know where to put the new code (again). I had to add "if button.value == False:" and then tab everything over a bunch under it. This makes it so that once you press the button everything else follows. 
 
 
-
 ## Launchpad_4-Servo
 
 ### Assignment Description
@@ -182,7 +183,7 @@ Today Gaby and I had to add on to our countdown code again so that a servo will 
 
 ### Evidence
 
-![Link to proof](images/IMG-4190.MOV)
+![](images/this1.gif)
 
 ### Wiring
 
@@ -228,7 +229,7 @@ while True:
 
 ### Reflection
 
-The servo code was given in the assignment, and you just had to add it on to the end of the While True so the assigment went pretty smoothly. We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. 
+We decided to set the servo angle to 0 so that our servo would start from the same place each time because we realized after running the code a couple times, the servo would be in the wrong starting position and not work as well.  We were in the wrong pin because Gaby thought that the 7th pin down was GP7, but it was actually GP5 so once we had that figured out the servo worked and we were done. Using button.value == False, I was able to set up the code so that the while true would run once I finished pressing the button. 
 
 ## Crash_Avoidance_P1
 
@@ -238,7 +239,11 @@ I had to get an accelerometer working and print acceleration, gyro, and temperat
 
 ### Evidence 
 
-![](images/P1.gif)
+![](images/deez2.gif)
+
+### Wiring 
+
+<img src="images/crash1.jpeg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -263,7 +268,7 @@ while True:
 
 ### Reflection
 
-This was fairly simple, once we had the right libraries moved into our circuitpy, we used the code from the assignment we were basically there.  
+After downloading the necessary folder modules needed for this code, it goes pretty smoothly. You need to have Acceleration, temperature, and gyro in order to find all the values for the assignment. Don't be alarmed by the ~9.8 because that's just gravity and is not going to mess with your values or anything. 
 
 
 ## Crash_Avoidance_P2
@@ -275,6 +280,10 @@ I had to get an accelerometer working so that when it was 90 degrees an led woul
 ### Evidence 
 
 ![](images/CA2.gif)
+
+### Wiring 
+
+<img src="images/crash2.jpeg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -306,8 +315,7 @@ while True:
 
 ### Reflection
 
-The code was confusing for this but Max helped us so it was fine. I had the wrong setup for 90 degree acceleration values but after that was fixed the thing worked smoothly. 
-
+This assignment was actually very easy. After importing everything you setup your led and wiring (double check that you are in the correct pins, i2c are still 2 pins off). The only thing you have to make sure you do is have the correct angle and degrees for the mpu.acceleration, we want it at 90 so when it's vertical the light will come on.
 
 ## Crash_Avoidance_P3
 
@@ -318,6 +326,10 @@ I had to get my led to blink at 90 degrees and print gyro xyz values onto a scre
 ### Evidence 
 
 ![](images/CA3.gif)
+
+### Wiring 
+
+![](images/crash3.jpg)
 
 ### Code
 
@@ -378,7 +390,7 @@ while True:
 
 ### Reflection
 
-The setup for the accelerometer and the screen was pretty straightforward but the code for the xyz values had me confused for a bit. Once I figured out how to do the code for x values to show up on the screen, I was able to set up the y and z values right after. 
+I forgot to use the code to find the addresses of the devices so that tripped me up for a while. To find the addresses, run [this code](https://drive.google.com/file/d/1YEmYYJnxZW2rdZCV6Mmu-fHIeQoKGVfL/view) and be sure to check which address is for each device. Also be sure to check your wiring because i2c wiring is always off 2 pins. 
 
 
 ## Landing_Area_P1
@@ -427,7 +439,7 @@ except:
 
 ### Reflection
 
-Honestly this was pretty confusing, especially since I hate math and coding, but once I figured out how to use try and set up each coordinate it went smoothly. The area equation actually turned out to be kinda simple which saved me braincells. 
+Using Try, you can input different coordinates and it allows you to try them, however you can use except with it so that when incorrect coordinates are used it stops the code and tells you to retry. This is convenient and fairly simple to use which makes it something you can use in mnay different code setups. The area formulas take your given coordinates and do the math of getting the triangle area for you, saving you time and braincells. 
 
 
 ## Landing_Area_P2
@@ -439,6 +451,10 @@ I had to get my serial monitor to take my chosen coordinates of a triangl and te
 ### Evidence 
 
 ![](images/fu1.gif)
+
+### Wiring 
+
+<img src="images/land2.jpg" alt="" width="250" height="250" />
 
 ### Code
 
@@ -485,7 +501,7 @@ while True:
         a3 = float(set3[0])
         b3 = float(set3[1])
 
-        tri_area(a1, b1, a2, b2, a3, b3)
+        tri_area(a1, b1, a2, b2, a3, b3)  #area
 
         c1 = int(a1)
         d1 = int(b1)
@@ -517,7 +533,7 @@ while True:
 
 ### Reflection
 
-This was even more confusing, but with Ian's help it went pretty smoothly. Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangl that was clearly visible on the screen. 
+Our biggest issue was not being able to see our triangle on the screen because our screen's x and y scale was different then expected. Once we adjusted to fit the screen, our coordinates made a nice triangl that was clearly visible on the screen. We adjusted the location of the triangles by adding numbers to the hline which moved the trianlges into visible quadrants of the screen. 
 
 
 
@@ -567,9 +583,153 @@ print(cheese) #write it
 
 ### Reflection
 
-This was pretty straight forward once I actually put effort into it. My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. 
+My variables may seem confusing at first, but essentially Cheese is the strings (string cheese) and connects them so that everything is more smoothly connected. Mouse is the alphabet and how the code works together. Using a dictionary is convenient because it allows you to use many variables and in this case, it allows you to use any letter of the alphabet and number/character to express a message. 
 
 
 
+## Morse_Code_P2
+
+### Assignment Description
+
+I had to write code so that when you type a mesage into the terminal, it's translated into morse code and then an LED blinks to spell out the message. 
+
+### Evidence 
+
+![](images/cheesestring.gif)
+
+### Wiring 
+
+<img src="images/last1.jpg" alt="" width="250" height="250" />
+
+### Code
+
+``` python
+import board
+import digitalio
+import time #imports
+
+MORSE_CODE = { 'A':'.-', 'B':'-...',  #dictionary, goes on top
+    'C':'-.-.', 'D':'-..', 'E':'.',
+    'F':'..-.', 'G':'--.', 'H':'....',
+    'I':'..', 'J':'.---', 'K':'-.-',
+    'L':'.-..', 'M':'--', 'N':'-.',
+    'O':'---', 'P':'.--.', 'Q':'--.-',
+    'R':'.-.', 'S':'...', 'T':'-',
+    'U':'..-', 'V':'...-', 'W':'.--',
+    'X':'-..-', 'Y':'-.--', 'Z':'--..',
+    '1':'.----', '2':'..---', '3':'...--',
+    '4':'....-', '5':'.....', '6':'-....',
+    '7':'--...', '8':'---..', '9':'----.',
+    '0':'-----', ',':'--..--', '.':'.-.-.-',
+    '?':'..--..', '/':'-..-.', '-':'-....-',
+    ' ': '/',
+    '(':'-.--.', ')':'-.--.-'}
+
+modifier = 0.25
+dot_time = 1*modifier
+dash_time = 3*modifier  #timing of flashes
+between_taps = 1*modifier
+between_letters = 3*modifier
+between_words = 7*modifier
+
+led1 = digitalio.DigitalInOut(board.GP13)
+led1.direction = digitalio.Direction.OUTPUT #led setup
+
+mouse1 = input("Mouse code set 1 (x,y)")  #input
+mouse1 = mouse1.upper() #make things uppercase
+
+cheese = " " #total strings
+
+for letter in mouse1: # use MORSE_CODE[letter] here to translate from input into morse code
+   cheese = cheese + (MORSE_CODE[letter]) + " " #stacks letters
+
+print(cheese) #write it
+
+for letter in cheese: #sets up spaces bwteen instances
+    if letter == ".": #for dots
+        led1.value = True #led turns on
+        time.sleep(dot_time) #sleeps for the set time for dots
+        led1.value = False #led is off
+
+    if letter == "-": #now for dashes
+        led1.value = True #led on
+        time.sleep(dash_time) #dash sleep time
+        led1.value = False #led off
+
+    if letter == " ": #for spaces
+        time.sleep(between_letters)  #rest for set space time between letters
+
+    if letter == "/":  #for spaces between words which show as dashes
+        time.sleep(between_words) #rest between words for set time
+
+    
+    time.sleep(dot_time) #stop led between uses of the code
+    
+```
+
+### Reflection
+This assignment justs builds off of all the previous ones which means you can figure a lot of things out on your own and fix your mistakes as you move through it.After adding Mr. Miller's code for the spacing between characters, I added an led using code from servo.py further up in my notebook. In order to actually use the code for the spacing, I used if statements to turn the led on and off and set the spacing.  
+
+
+## FEA_Part1
+
+### Assignment Description
+
+We had to design a beam that would hold as much weight as possible without breaking or bending more than 35mm. 
+
+### Evidence 
+
+<img src="images/holder1.png" alt="" width="400" height="400" />
+
+### Reflection
+
+We went for a simple design at first that we thought would be more stable than a complex one. We had walls and had 2 triangular rows going through the center of the beam, to increase flexibility so the beam wouldn't snap. The weight was within criteria but the end of our beam seemed thin to support a bucket and excess weight, we addressed that problem after using the sim in the next part of the assignment. 
+
+
+## FEA_Part2
+
+### Assignment Description
+
+We had to run one static finite element analysis sim on our beam to see what areas needed improvement and what went well as a whole. 
+
+### Evidence
+
+<img src="images/sim1.PNG" alt="" width="450" height="400" />
+
+### Reflection
+
+This sim showed that our simple design kind of sucked. The beam bent way over the 35mm allowed, but it didn't show a break instance anywhere so that was impressive. We decided that our design was too weak and had to adjust so it would hold itself up.
+
+
+## FEA_Part3
+
+### Assignment description
+
+We had to improve our beam after seeing it fail in the simulation from bending too much and run our improved design in the sim again. 
+
+### Evidence
+
+<img src="images/sim2.PNG" alt="" width="700" height="350" />
+
+<img src="images/beam2.PNG" alt="" width="600" height="350" />
+
+### Reflection
+
+We decided to make the walls taller and add diamond holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we beefed up the end of the beam that held the bucket with the washer and bolt. 
+
+
+## Cad_Ring
+
+### Assignment description
+
+We had to design the ring part of the Helicopter cad assignment. 
+
+### Evidence
+
+<img src="images/ring.PNG" alt="" width="350" height="500" />
+
+### Reflection
+
+ This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.
 
 
