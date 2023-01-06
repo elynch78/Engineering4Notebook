@@ -1,0 +1,17 @@
+import time #imports
+import board
+import digitalio
+import adafruit_mpl3115a2
+
+button = digitalio.DigitalInOut(board.GP16) #adds in the button
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP #incorperates the button into the circuit
+i2c = board.I2C()
+sensor = adafruit_mpl3115a2.MPL3115A2(i2c) 
+
+while True: #if the button is pressed this will happen
+     if button.value == False:
+        altitude = sensor.altitude #read altitude
+        print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
+
+ 
