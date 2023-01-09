@@ -2,10 +2,14 @@ import time #imports
 import board
 import digitalio
 import adafruit_mpl3115a2
+import busio
 
 button = digitalio.DigitalInOut(board.GP16) #adds in the button
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP #incorperates the button into the circuit
+sda_pin = board.GP0  #sets up i2c
+scl_pin = board.GP1
+i2c = busio.I2C(scl_pin, sda_pin)
 i2c = board.I2C()
 sensor = adafruit_mpl3115a2.MPL3115A2(i2c) 
 
