@@ -10,12 +10,17 @@ button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 sda_pin = board.GP0  #sets up i2c
 scl_pin = board.GP1
 i2c = busio.I2C(scl_pin, sda_pin)
-i2c = board.I2C()
 sensor = adafruit_mpl3115a2.MPL3115A2(i2c) 
 
-while True: #if the button is pressed this will happen
+while True: #if the button/switch is pressed this will happen
      if button.value == False:
-        altitude = sensor.altitude #read altitude
-        print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
+         altitude = sensor.altitude #read altitude
+         print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
+         temperature = sensor.temperature
+         print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
+         time.sleep(1.0)
+         if altitude [-1]-altitude[-30]<2:  #when the altimeter readings stop changing
+            break   #stop code taking values
 
- 
+      else:
+         
