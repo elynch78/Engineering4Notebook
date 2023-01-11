@@ -21,6 +21,4 @@ while True: #if the button/switch is pressed this will happen
          time.sleep(1.0)
          if altitude [-1]-altitude[-30]<2:  #when the altimeter readings stop changing
             break   #stop code taking values
-
-      else:
          
