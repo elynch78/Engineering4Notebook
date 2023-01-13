@@ -12,13 +12,23 @@ scl_pin = board.GP1
 i2c = busio.I2C(scl_pin, sda_pin)
 sensor = adafruit_mpl3115a2.MPL3115A2(i2c) 
 
+time_list = []
+altitude_list = []
+temperature_list = []
+
 while True: #if the button/switch is pressed this will happen
      if button.value == False:
          altitude = sensor.altitude #read altitude
-         print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
+         altitude_list.append(sensor.altitude)
+         #print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
          temperature = sensor.temperature
-         print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
-         time.sleep(1.0)
+         temperature_list.append(sensor.temperature) #saves values for collection later
+         #print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
+         time_list.append(time.monotonic())
+         #time.sleep(1.0)
+         
          if altitude [-1]-altitude[-30]<2:  #when the altimeter readings stop changing
             break   #stop code taking values
          
+#store data to pico in csv
+input_values = f" {time}, {altitude}, {temperature}"
