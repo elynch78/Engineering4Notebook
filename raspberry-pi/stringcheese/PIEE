@@ -13,7 +13,7 @@ i2c = busio.I2C(scl_pin, sda_pin)
 sensor = adafruit_mpl3115a2.MPL3115A2(i2c) 
 
 time_list = []
-altitude_list = []
+altitude_list = []  #sets up lists
 temperature_list = []
 
 while True: #if the button/switch is pressed this will happen
@@ -31,5 +31,10 @@ while True: #if the button/switch is pressed this will happen
             break   #stop code taking values
          
 #store data to pico in csv
-input_values = f" {time}, {altitude}, {temperature}"
-#dfgh
+
+
+with open("/data.txt", "a") as datalog:
+        for i in range(len(time_list)):
+            input_values = f" {time[i]}, {altitude[i]}, {temperature[i]}"
+            datalog.write('{0:f}\n'.format(input_values))  #save all time, altitude, temperature values in seperate lines in pico
+            datalog.flush()
