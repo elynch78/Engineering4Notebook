@@ -15,9 +15,15 @@ sensor = adafruit_mpl3115a2.MPL3115A2(i2c)
 time_list = []
 altitude_list = []  #sets up lists
 temperature_list = []
+new_data = 0
 
 while True: #if the button/switch is pressed this will happen
      if button.value == False:
+         if new_data == 0:
+            data_time = time.monotonic()
+            new_data = 1
+         print("taking data")
+         print(time.monotonic()-data_time)
          altitude = sensor.altitude #read altitude
          altitude_list.append(sensor.altitude)
          #print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
@@ -27,8 +33,11 @@ while True: #if the button/switch is pressed this will happen
          time_list.append(time.monotonic())
          #time.sleep(1.0)
          
-         if altitude [-1]-altitude[-30]<2:  #when the altimeter readings stop changing
-            break   #stop code taking values
+         #if altitude[-1]-altitude[-30]<2 and time.monotonic()>800:  #when the altimeter readings stop changing
+         if time.monotonic()-data_time>30:
+            if altitude_list[-1]-altitude_list[-10]<2:
+               break   #stop code taking values
+
          
 #store data to pico in csv
 
