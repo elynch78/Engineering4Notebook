@@ -22,28 +22,28 @@ while True: #if the button/switch is pressed this will happen
          if new_data == 0:
             data_time = time.monotonic()
             new_data = 1
-         print("taking data")
-         print(time.monotonic()-data_time)
          altitude = sensor.altitude #read altitude
          altitude_list.append(sensor.altitude)
-         #print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
+         print("Altitude: {0:0.3f} meters".format(altitude)) #print altitude readings
          temperature = sensor.temperature
          temperature_list.append(sensor.temperature) #saves values for collection later
-         #print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
+         print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
          time_list.append(time.monotonic())
          #time.sleep(1.0)
          
          #if altitude[-1]-altitude[-30]<2 and time.monotonic()>800:  #when the altimeter readings stop changing
-         if time.monotonic()-data_time>30:
+         if time.monotonic()-data_time>15:
             if altitude_list[-1]-altitude_list[-10]<2:
                break   #stop code taking values
 
          
 #store data to pico in csv
-
+print(time_list)
+print(altitude_list)
+print(temperature_list)
 
 with open("/data.txt", "a") as datalog:
         for i in range(len(time_list)):
-            input_values = f" {time[i]}, {altitude[i]}, {temperature[i]}"
+            input_values = f" {time_list[i]}, {altitude_list[i]}, {temperature_list[i]}"
             datalog.write('{0:f}\n'.format(input_values))  #save all time, altitude, temperature values in seperate lines in pico
             datalog.flush()
