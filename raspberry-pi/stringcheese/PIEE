@@ -17,7 +17,13 @@ altitude_list = []  #sets up lists
 temperature_list = []
 new_data = 0
 
+led = digitalio.DigitalInOut(board.LED) 
+led.direction = digitalio.Direction.OUTPUT 
+led.value = True 
+
 while True: #if the button/switch is pressed this will happen
+
+
      if button.value == False:
          if new_data == 0:
             data_time = time.monotonic()
@@ -31,9 +37,8 @@ while True: #if the button/switch is pressed this will happen
          time_list.append(time.monotonic())
          #time.sleep(1.0)
          
-         #if altitude[-1]-altitude[-30]<2 and time.monotonic()>800:  #when the altimeter readings stop changing
-         if time.monotonic()-data_time>15:
-            if altitude_list[-1]-altitude_list[-10]<2:
+         if time.monotonic()-data_time>15: # CHANGE THIS must take less than this time to launch after switch flipped
+            if abs(altitude_list[-1]-altitude_list[-10])<2: # CHANGE THIS rocket has landed
                break   #stop code taking values
 
          
@@ -42,8 +47,8 @@ print(time_list)
 print(altitude_list)
 print(temperature_list)
 
-with open("/data.txt", "a") as datalog:
+with open(f"/{int(time.monotonic())}.txt", "a") as datalog:
         for i in range(len(time_list)):
             input_values = f" {time_list[i]}, {altitude_list[i]}, {temperature_list[i]}"
-            datalog.write('{0:f}\n'.format(input_values))  #save all time, altitude, temperature values in seperate lines in pico
+            datalog.write('{}\n'.format(input_values))  #save all time, altitude, temperature values in seperate lines in pico
             datalog.flush()
