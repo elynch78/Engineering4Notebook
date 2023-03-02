@@ -3,6 +3,7 @@ import board
 import digitalio
 import adafruit_mpl3115a2
 import busio
+import random
 
 button = digitalio.DigitalInOut(board.GP16) #adds in the button
 button.direction = digitalio.Direction.INPUT
@@ -35,20 +36,21 @@ while True: #if the button/switch is pressed this will happen
          temperature_list.append(sensor.temperature) #saves values for collection later
          print("Temperature: {0:0.3f} degrees Celsius".format(temperature))
          time_list.append(time.monotonic())
-         #time.sleep(1.0)
+         time.sleep(1.0)
          
-         if time.monotonic()-data_time>15: # CHANGE THIS must take less than this time to launch after switch flipped
+         if time.monotonic()-data_time>20: # CHANGE THIS must take less than this time to launch after switch flipped
             if abs(altitude_list[-1]-altitude_list[-10])<2: # CHANGE THIS rocket has landed
                break   #stop code taking values
+#
 
-         
 #store data to pico in csv
 print(time_list)
 print(altitude_list)
 print(temperature_list)
 
-with open(f"/{int(time.monotonic())}.txt", "a") as datalog:
+with open(f"/{int(1000*random.random())}.txt", "a") as datalog:
         for i in range(len(time_list)):
             input_values = f" {time_list[i]}, {altitude_list[i]}, {temperature_list[i]}"
             datalog.write('{}\n'.format(input_values))  #save all time, altitude, temperature values in seperate lines in pico
             datalog.flush()
+#
