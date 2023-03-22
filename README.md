@@ -675,7 +675,7 @@ This assignment justs builds off of all the previous ones which means you can fi
 
 ### Assignment Description
 
-We had to design a beam that would hold as much weight as possible without breaking or bending more than 35mm. 
+We had to design a beam that would hold as much weight as possible without breaking or bending more than 35mm. We hope to learn more about the functions and tools on Onshape.
 
 ### Evidence 
 
@@ -698,14 +698,14 @@ We had to run one static finite element analysis sim on our beam to see what are
 
 ### Reflection
 
-This sim showed that our simple design kind of sucked. The beam bent way over the 35mm allowed, but it didn't show a break instance anywhere so that was impressive. We decided that our design was too weak and had to adjust so it would hold itself up.
+This sim showed that our simple design kind of sucked. The beam bent way over the 35mm allowed, but it didn't show a break instance anywhere so that was impressive. We decided that our design was too weak and had to adjust so it would hold itself up. We used the failures from this test inorder to better design a beam.
 
 
 ## FEA_Part3
 
 ### Assignment description
 
-We had to improve our beam after seeing it fail in the simulation from bending too much and run our improved design in the sim again. 
+We had to improve our beam after seeing it fail in the simulation from bending too much and run our improved design in the sim again. By using onshape and what had already been learned we used our basic knowledge of beams and bridges for a more sturdy result.
 
 ### Evidence
 
@@ -715,14 +715,14 @@ We had to improve our beam after seeing it fail in the simulation from bending t
 
 ### Reflection
 
-We decided to make the walls taller and add diamond holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we beefed up the end of the beam that held the bucket with the washer and bolt. 
+We decided to make the walls taller and add diamond shaped holes in the walls to increase the durability of our beam. It bent too much in the sim so after adding the height and holes we thought the beam would stand better. After running the sim again with our new design we strengthened the end of the beam that held the bucket with the washer and bolt. We still werent sure that the beam would hold up so we ran it through the simulation in order to test our new design and it held up much better than the previous design.
 
 
 ## Cad_Ring
 
 ### Assignment description
 
-We had to design the ring part of the Helicopter cad assignment. 
+We had to design the ring part of the Helicopter cad assignment. This is a 'real' partner assignment so ellen and i were able to finish relatively quickly. 
 
 ### Evidence
 
@@ -730,19 +730,23 @@ We had to design the ring part of the Helicopter cad assignment.
 
 ### Reflection
 
- This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.
-
-## Cad_Spinner
+ This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.(Ellen did this portion)
+ 
+ 
+ ## Cad_Spinner
 
 ### Assignment description
 
-We had to design the spinner part of the Helicopter cad assignment to fit the ring.
+We had to design the spinner part of the helicopter CAD assignment. The spinner is what wind up the helicopter inorder to fly.  This is a 'real' partner assignment so ellen and i were able to finish relatively quickly. 
 
 ### Evidence
 
-<img src="images/spin.PNG" alt="" width="350" height="500" />
+<img src="images/ring.PNG" alt="" width="350" height="500" />
 
 ### Reflection
 
+ This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.(Ellen did this portion)
+ 
+ 
 
 
