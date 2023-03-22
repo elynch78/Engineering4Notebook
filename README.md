@@ -756,6 +756,6 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
  
  ### Evidence
  
-![](images/key.PNG)
+<img src="images/key.PNG" alt="" width="400" height="350" />
 
 
