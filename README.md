@@ -749,5 +749,16 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
 This part was pretty straightforward. It was slightly tricky to do the cut-outs that line up with the key. We had to learn how to use new tools in onshape and do a little trial and error inorder to succesfully finish this portion.(Gaby did this portion)
  
  
+ ## Cad_Key
+
+### Assignment description
+
+
+### Evidence
+
+<img src="images/spin.PNG" alt="" width="350" height="600" />
+
+### Reflection
+
 
 
