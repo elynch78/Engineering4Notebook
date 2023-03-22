@@ -18,6 +18,7 @@
 * [FEA_Part2](#FEA_Part2)
 * [FEA_Part3](#FEA_Part3)
 * [CAD_Ring](#CAD_Ring)
+* [CAD Spinner](#CAD_Spinner)
 
 ## Pico_Intro
 
