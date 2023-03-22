@@ -732,4 +732,17 @@ We had to design the ring part of the Helicopter cad assignment.
 
  This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.
 
+## Cad_Spinner
+
+### Assignment description
+
+We had to design the spinner part of the Helicopter cad assignment to fit the ring.
+
+### Evidence
+
+<img src="images/spin.PNG" alt="" width="350" height="500" />
+
+### Reflection
+
+
 
