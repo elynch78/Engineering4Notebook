@@ -19,9 +19,6 @@
 * [FEA_Part3](#FEA_Part3)
 * [CAD_Ring](#CAD_Ring)
 * [CAD Spinner](#CAD_Spinner)
-* [CAD Key](#CAD_Key)
-* [CAD Prop](#CAD_Prop)
-
 
 ## Pico_Intro
 
@@ -745,17 +742,17 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
 
 ### Evidence
 
-<img src="images/spin.PNG" alt="" width="200" height="500" />
+<img src="images/spin.PNG" alt="" width="350" height="600" />
 
 ### Reflection
 
-This part was pretty straightforward. It was slightly tricky to do the cut-outs that line up with the key. We had to learn how to use new tools in onshape and do a little trial and error inorder to succesfully finish this portion.(Gaby did this portion)
+During this project, we encountered a slightly tricky part where we had to do cut-outs that line up with the key. Gaby took charge of this portion and successfully completed it after learning how to use new tools in Onshape. We had to go through a little trial and error to ensure the cut-outs were done accurately. Despite the challenge, this part was otherwise straightforward.
  
  
  ## Cad_Key
 
 ### Assignment description
-
+This assignment required us to use a tool to create a sequence of cut-outs. The key gives the helicopter the ability to fly by simply winding it up and pulling. This is part of a 4 part CAD assignment.
 
 ### Evidence
 
@@ -763,19 +760,7 @@ This part was pretty straightforward. It was slightly tricky to do the cut-outs 
 
 ### Reflection
 
-
-
- 
- ## Cad_Prop
-
-### Assignment description
-
-
-### Evidence
-
-<img src="images/bayblade.PNG" alt="" width="400" height="400" />
-
-### Reflection
+The onshape assignment we were tasked with was quite simple yet had some issues. Our objective was to create a key that could essentially wind up a fan and make it fly. It required a lot of attention to detail and precision to ensure that all the parts fit together perfectly(we actually had to follow instructions). Despite the difficulties, I learned a lot from this assignment like how to use tools inorder to create a repeated pattern within a confined part. It taught me the importance of patience and perseverance when working on complex projects. Overall, it was a great learning experience that helped me develop my skills in onshape design
 
 
 
