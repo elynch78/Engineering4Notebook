@@ -18,8 +18,6 @@
 * [FEA_Part2](#FEA_Part2)
 * [FEA_Part3](#FEA_Part3)
 * [CAD_Ring](#CAD_Ring)
-* [CAD Spinner](#CAD_Spinner)
-* [CAD Key](#CAD_Key)
 
 ## Pico_Intro
 
@@ -739,7 +737,7 @@ We had to design the ring part of the Helicopter cad assignment. This is a 'real
 
 ### Assignment description
 
-We had to design the spinner part of the helicopter CAD assignment. The spinner is what wind up the helicopter inorder to fly.  This is a 'real' partner assignment so ellen and i were able to finish relatively quickly. 
+We had to design the spinner part of the helicopter CAD assignment. The spinner assists the helicopter to properly fly. This is a 'real' partner assignment so ellen and i were able to finish relatively quickly. 
 
 ### Evidence
 
@@ -747,15 +745,8 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
 
 ### Reflection
 
- This part was pretty straightforward. At first I had started doing the circle part of the ring on the top end and not the bottom but that was a simple mistake and I fixed it quickly. We made a variable and then added to it during a dimension, but I assume we'll use it more later and that why we didn't change the actual variable but added for this instance.(Ellen did this portion)
- 
- ## Cad_Key
- 
- ### Assignment Description
+This part was pretty straightforward. It was slightly tricky to do the cut-outs that line up with the key. We had to learn how to use new tools in onshape and do a little trial and error inorder to succesfully finish this portion.(Gaby did this portion)
  
  
- ### Evidence
- 
-<img src="images/key.PNG" alt="" width="400" height="350" />
 
 
