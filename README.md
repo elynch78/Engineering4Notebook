@@ -19,6 +19,9 @@
 * [FEA_Part3](#FEA_Part3)
 * [CAD_Ring](#CAD_Ring)
 * [CAD Spinner](#CAD_Spinner)
+* [CAD Key](#CAD_Key)
+* [CAD Prop](#CAD_Prop)
+
 
 ## Pico_Intro
 
@@ -746,7 +749,7 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
 
 ### Reflection
 
-During this project, we encountered a slightly tricky part where we had to do cut-outs that line up with the key. Gaby took charge of this portion and successfully completed it after learning how to use new tools in Onshape. We had to go through a little trial and error to ensure the cut-outs were done accurately. Despite the challenge, this part was otherwise straightforward.
+This part was pretty straightforward. It was slightly tricky to do the cut-outs that line up with the key. We had to learn how to use new tools in onshape and do a little trial and error inorder to succesfully finish this portion.(Gaby did this portion)
  
  
  ## Cad_Key
@@ -757,6 +760,20 @@ During this project, we encountered a slightly tricky part where we had to do cu
 ### Evidence
 
 <img src="images/key.PNG" alt="" width="400" height="400" />
+
+### Reflection
+
+
+
+ 
+ ## Cad_Prop
+
+### Assignment description
+
+
+### Evidence
+
+<img src="images/bayblade.PNG" alt="" width="400" height="400" />
 
 ### Reflection
 
