@@ -741,7 +741,7 @@ We had to design the spinner part of the helicopter CAD assignment. The spinner 
 
 ### Evidence
 
-<img src="images/ring.PNG" alt="" width="350" height="500" />
+<img src="images/spin.PNG" alt="" width="350" height="600" />
 
 ### Reflection
 
