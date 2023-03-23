@@ -768,10 +768,8 @@ The onshape assignment we were tasked with was quite simple yet had some issues.
 ## Cad_Prop
 
 ### Assignment description
-
+We had to make the final piece of the helicopter. This piece is what allowed it to 'fly' using the angled pieces. We used onshape to create the piece.
 ### Evidence
-
-![](images/bayblade.PNG)
 
 ### Reflection
 This assignment was completed without much difficulty. The only challenge we faced was creating the diagonal pieces that connect the center to the thin outline. We had to pay close attention to the instructions to ensure that we executed the task correctly. Despite this minor obstacle, we were able to complete the assignment successfully.
