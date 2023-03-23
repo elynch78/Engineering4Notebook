@@ -17,8 +17,9 @@
 * [FEA_Part1](#FEA_Part1)
 * [FEA_Part2](#FEA_Part2)
 * [FEA_Part3](#FEA_Part3)
-* [CAD_Ring](#CAD_Ring)
+* [CAD Ring](#CAD_Ring)
 * [CAD Spinner](#CAD_Spinner)
+* [CAD Prop](#CAD_Prop)
 
 ## Pico_Intro
 
@@ -764,3 +765,10 @@ The onshape assignment we were tasked with was quite simple yet had some issues.
 
 
 
+## Cad_Prop
+
+### Assignment description
+
+### Evidence
+
+### Reflection
