@@ -1,0 +1,2 @@
+git config --global user.name "elynch78"
+git config --global user.email “elynch78@charlottesvilleschools.org"
