@@ -1,4 +1,4 @@
-import time
+import time #imports
 import board
 import digitalio
 
@@ -13,5 +13,16 @@ button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 while True: #if the button is pressed this will happen
      if button.value == False:
           for x in reversed(range(11)):
-              
+               led1.value = True #light bright
+               time.sleep(0.5) #light snooze
+               print(x)
+               led1.value = False #light off
+               time.sleep(0.5)
+          while True:
+               led2.value = True
+               time.sleep(0.5)
  
+
+
+ #put before if 
+ #https://stackoverflow.com/questions/27337331/how-do-i-make-a-score-counter-in-python 
