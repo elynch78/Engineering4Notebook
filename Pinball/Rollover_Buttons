@@ -25,4 +25,4 @@ while True: #if the button is pressed this will happen
 
 
  #put before if 
- #https://stackoverflow.com/questions/27337331/how-do-i-make-a-score-counter-in-python 
+#https://stackoverflow.com/questions/27337331/how-do-i-make-a-score-counter-in-python
