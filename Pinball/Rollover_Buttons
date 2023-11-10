@@ -12,17 +12,16 @@ button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 
 score = 0   #base value
 oldbutton_state = 0
-button_value = 0
+
 
 while True: #if the button is pressed this will happen
      if button.value == False: #if pressed
           if oldbutton_state == 0:
-               button_value = score + 350
+               score = score + 350
                print(score)
                oldbutton_state = 1 #button was pressed
      else:
           oldbutton_state = 0
 
 
- #put before if 
-#https://stackoverflow.com/questions/27337331/how-do-i-make-a-score-counter-in-python
+ 
