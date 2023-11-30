@@ -1,0 +1,9 @@
+import time
+import busio
+import board
+import digitalio
+import adafruit_character_lcd.character_lcd as character_lcd 
+
+
+##https://www.penguintutor.com/electronics/pico-lcd
+##https://learn.adafruit.com/character-lcds/python-circuitpython 
