@@ -10,18 +10,15 @@ button = digitalio.DigitalInOut(board.GP16) #adds in the button
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 
-score = 0   #base value
+score = 0   #base value starts score at 0
 oldbutton_state = 0
 
 
 while True: #if the button is pressed this will happen
      if button.value == False: #if pressed
           if oldbutton_state == 0:
-               score = score + 350
+               score = score + 350 #each time the button is pushed the score increases by 350
                print(score)
                oldbutton_state = 1 #button was pressed
      else:
-          oldbutton_state = 0
-
-
- 
+          oldbutton_state = 0   #only changes when the button is pressed
