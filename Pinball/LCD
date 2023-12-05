@@ -4,19 +4,35 @@ import busio  # type: ignore
 
 i2c = busio.I2C(board.GP15,board.GP14) 
 
-while not i2c.try_lock():
-    pass
 
-try:
-    while True:
-        print(
-            "I2C addresses found:",
-            [hex(device_address) for device_address in i2c.scan()],
-        )
-        time.sleep(2)
 
-finally:  # unlock the i2c bus when ctrl-c'ing out of the loop
-    i2c.unlock()
+import board
+import busio
+import time
+
+# Pin definitions
+
+# I2C used for LCD Display
+i2c_scl = board.GP17
+i2c_sda = board.GP16
+i2c_address = 0x27 # 39 decimal
+
+# LCD display info
+cols = 16
+rows = 2
+
+
+# Setup LCD display
+
+i2c = busio.I2C(scl=i2c_scl, sda=i2c_sda)
+interface = I2CPCF8574Interface(i2c, i2c_address)
+lcd = LCD(interface, num_rows=rows, num_cols=cols)
+lcd.set_cursor_mode(CursorMode.HIDE)
+
+lcd.print ("word")
+ 
+#12c=0x27
+
 
 ##https://www.penguintutor.com/electronics/pico-lcd
 ##https://learn.adafruit.com/character-lcds/python-circuitpython 
