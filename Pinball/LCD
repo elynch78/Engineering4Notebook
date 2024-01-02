@@ -37,7 +37,7 @@ lcd.print ("word")
 ##https://www.penguintutor.com/electronics/pico-lcd
 ##https://learn.adafruit.com/character-lcds/python-circuitpython 
 ##https://learn.adafruit.com/i2c-spi-lcd-backpack/python-circuitpython 
-
+##https://github.com/T-622/RPI-PICO-I2C-LCD 
 
 
 
