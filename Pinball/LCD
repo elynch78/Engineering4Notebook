@@ -1,11 +1,11 @@
 import time # type: ignore
 import board # type: ignore
 import busio  # type: ignore
+import displayio
  
 from lcd.lcd import LCD, CursorMode
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
-i2c = busio.I2C(board.GP11,board.GP10) 
 
 
 
@@ -38,9 +38,6 @@ lcd.print ("word")
 ##https://learn.adafruit.com/character-lcds/python-circuitpython 
 ##https://learn.adafruit.com/i2c-spi-lcd-backpack/python-circuitpython 
 ##https://github.com/T-622/RPI-PICO-I2C-LCD 
-
-
-
 
 
 
