@@ -1,11 +1,15 @@
 import time # type: ignore
 import board # type: ignore
 import busio  # type: ignore
+import digitalio
 import displayio
  
 from lcd.lcd import LCD, CursorMode
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
+button = digitalio.DigitalInOut(board.GP16) #adds in the button
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 
 
 
@@ -20,7 +24,8 @@ i2c_address = 0x27 # 39 decimal
 cols = 16
 rows = 2
 
-
+score = 0   #base value starts score at 0
+oldbutton_state = 0
 
 # Setup LCD display
 
@@ -29,7 +34,14 @@ interface = I2CPCF8574Interface(i2c, i2c_address)
 lcd = LCD(interface, num_rows=rows, num_cols=cols)
 lcd.set_cursor_mode(CursorMode.HIDE)
 
-lcd.print ("word")
+while True: #if the button is pressed this will happen
+     if button.value == False: #if pressed
+          if oldbutton_state == 0:
+               score = score + 350 #each time the button is pushed the score increases by 350
+               lcd.print(score)
+               oldbutton_state = 1 #button was pressed
+     else:
+          oldbutton_state = 0   #only changes when the button is pressedlcd.print ("word")
  
 #12c=0x27
 
