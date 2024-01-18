@@ -12,7 +12,6 @@ button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP #incorperates the button into the circuit
 
 
-
 # Pin definitions
 
 # I2C used for LCD Display
@@ -38,12 +37,14 @@ while True: #if the button is pressed this will happen
      if button.value == False: #if pressed
           if oldbutton_state == 0:
                score = score + 350 #each time the button is pushed the score increases by 350
-               lcd.print(score)
+               lcd.set_cursor_pos(0, 0)
+               lcd.print(str(score))
                oldbutton_state = 1 #button was pressed
      else:
           oldbutton_state = 0   #only changes when the button is pressedlcd.print ("word")
- 
-#12c=0x27
+
+
+
 
 
 ##https://www.penguintutor.com/electronics/pico-lcd
