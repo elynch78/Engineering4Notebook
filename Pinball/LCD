@@ -3,7 +3,7 @@ import board
 import busio  
 import digitalio
 import displayio
- 
+
 from lcd.lcd import LCD, CursorMode
 from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
 
